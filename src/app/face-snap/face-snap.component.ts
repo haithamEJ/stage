@@ -24,6 +24,13 @@ export class FaceSnapComponent implements OnInit{
     this.snaps = 9;
     this.snaped = false;
     this.message = "Oh Snap!"
+    this.faceSnap = {
+      title: 'Beautiful Sunset',
+      description: 'A stunning sunset over the mountains',
+      imgUrl: 'https://i.pinimg.com/736x/29/8a/89/298a89a74673703411f7632cf3832465.jpg',
+      createAt: new Date(),
+      snaps: 0,
+    };
   }
 
   onAddSnap():void {

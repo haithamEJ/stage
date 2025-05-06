@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FaceSnapComponent } from './face-snap/face-snap.component';
 import { FaceSnap } from './models/face-snap';
 import { JsonTableComponent } from './json-table/json-table.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   imports: [
-    FaceSnapComponent,
-    JsonTableComponent
+    RouterOutlet,
+    HeaderComponent
+    // FaceSnapComponent
+    // JsonTableComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

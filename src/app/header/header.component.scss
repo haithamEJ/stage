@@ -1,0 +1,109 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #333;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 2.5rem;
+  padding: 1.25rem 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  position: relative;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 0.75rem 0;
+  position: relative;
+  display: block;
+}
+
+a:hover {
+  color: #f3f3f3;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background: linear-gradient(90deg, #fff, #a1a1a1);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a.active {
+  color: #fff;
+}
+
+a.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, #fff, #a1a1a1);
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+body {
+  padding-top: 100px;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #000;
+}
+
+
+@media (max-width: 768px) {
+  ul {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  a {
+    font-size: 1.1rem;
+  }
+}
