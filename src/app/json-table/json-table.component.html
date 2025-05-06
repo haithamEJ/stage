@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Table 1: Projects</h2>
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th *ngFor="let header of headers">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of transformedData">
+          <td *ngFor="let header of headers">{{ row[header] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Table 2: Programs</h2>
+  <div class="table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th *ngFor="let header of headers2">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of transformedData2">
+          <td *ngFor="let header of headers2">{{ row[header] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2>Table 3: Programs</h2>
+<div class="table-container">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th *ngFor="let header of headers3">{{ header }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of transformedData3">
+        <td *ngFor="let header of headers3">{{ row[header] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

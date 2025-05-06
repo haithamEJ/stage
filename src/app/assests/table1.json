@@ -1,0 +1,65 @@
+[
+  {
+    "PROGRAMME": "100 DUMMY PROGRAM A",
+    "LF_2025_CP_2025": "1000000,00",
+    "LF_2025_CE_2026": "2000000,00",
+    "Delegations_CP_2025": "-",
+    "Delegations_CE_2026": null,
+    "Disponible_engagements_CP_2025": "1000000,00",
+    "Disponible_engagements_CE_2026": "2000000,00"
+  },
+  {
+    "PROGRAMME": "101 DUMMY PROGRAM B",
+    "LF_2025_CP_2025": "3000000,00",
+    "LF_2025_CE_2026": "4000000,00",
+    "Delegations_CP_2025": "100000,00",
+    "Delegations_CE_2026": null,
+    "Disponible_engagements_CP_2025": "2900000,00",
+    "Disponible_engagements_CE_2026": "4000000,00"
+  },
+  {
+    "PROGRAMME": "102 DUMMY PROGRAM C",
+    "LF_2025_CP_2025": "500000,00",
+    "LF_2025_CE_2026": "600000,00",
+    "Delegations_CP_2025": "200000,00",
+    "Delegations_CE_2026": null,
+    "Disponible_engagements_CP_2025": "300000,00",
+    "Disponible_engagements_CE_2026": "600000,00"
+  },
+  {
+    "PROGRAMME": "103 DUMMY PROGRAM D",
+    "LF_2025_CP_2025": "700000,00",
+    "LF_2025_CE_2026": "800000,00",
+    "Delegations_CP_2025": "-",
+    "Delegations_CE_2026": null,
+    "Disponible_engagements_CP_2025": "700000,00",
+    "Disponible_engagements_CE_2026": "800000,00"
+  },
+  {
+    "PROGRAMME": "104 DUMMY PROGRAM E",
+    "LF_2025_CP_2025": "900000,00",
+    "LF_2025_CE_2026": "100000,00",
+    "Delegations_CP_2025": "50000,00",
+    "Delegations_CE_2026": "100000,00",
+    "Disponible_engagements_CP_2025": "850000,00",
+    "Disponible_engagements_CE_2026": "-"
+  },
+  {
+    "PROGRAMME": "105 DUMMY PROGRAM F",
+    "LF_2025_CP_2025": "10000000,00",
+    "LF_2025_CE_2026": "20000000,00",
+    "Delegations_CP_2025": "500000,00",
+    "Delegations_CE_2026": "600000,00",
+    "Disponible_engagements_CP_2025": "9500000,00",
+    "Disponible_engagements_CE_2026": "19400000,00"
+  },
+  {
+    "PROGRAMME": "999 TOTAL DUMMY",
+    "LF_2025_CP_2025": "16000000,00",
+    "LF_2025_CE_2026": "27000000,00",
+    "Delegations_CP_2025": "850000,00",
+    "Delegations_CE_2026": "700000,00",
+    "Disponible_engagements_CP_2025": "15150000,00",
+    "Disponible_engagements_CE_2026": "26300000,00"
+  }
+]

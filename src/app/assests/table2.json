@@ -1,0 +1,134 @@
+[
+  {
+    "Description": "Transfer to Dummy Social Support Fund",
+    "DESTINATION": "DSSF",
+    "Credits_programmes_CP_2025": "1 000 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy School A",
+    "DESTINATION": "DSA",
+    "Credits_programmes_CP_2025": "750 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Transfer to Dummy Foundation Contract",
+    "DESTINATION": "DFND",
+    "Credits_programmes_CP_2025": "300 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Transfer for Dummy Vaccine Allocation",
+    "DESTINATION": "DVAX",
+    "Credits_programmes_CP_2025": "120 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Transfer to Dummy Child Protection League",
+    "DESTINATION": "DCPL",
+    "Credits_programmes_CP_2025": "25 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Institute A",
+    "DESTINATION": "DIA",
+    "Credits_programmes_CP_2025": "12 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Modernization grant to Dummy Health Institute",
+    "DESTINATION": "DHI",
+    "Credits_programmes_CP_2025": "7 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant (Dummy Center A)",
+    "DESTINATION": "DCA",
+    "Credits_programmes_CP_2025": "3 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Blood Center",
+    "DESTINATION": "DBC",
+    "Credits_programmes_CP_2025": "8 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Tanger",
+    "DESTINATION": "DH TANG",
+    "Credits_programmes_CP_2025": "10 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Oujda",
+    "DESTINATION": "DH OUJD",
+    "Credits_programmes_CP_2025": "15 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Fes",
+    "DESTINATION": "DH FES",
+    "Credits_programmes_CP_2025": "18 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Rabat",
+    "DESTINATION": "DH RABAT",
+    "Credits_programmes_CP_2025": "45 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Casa",
+    "DESTINATION": "DH CASA",
+    "Credits_programmes_CP_2025": "45 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Marrakech",
+    "DESTINATION": "DH MARRA",
+    "Credits_programmes_CP_2025": "18 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Equipment grant to Dummy Hospital Agadir",
+    "DESTINATION": "DH AGADIR",
+    "Credits_programmes_CP_2025": "9 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Transfer to Dummy University of Fes",
+    "DESTINATION": "DUF",
+    "Credits_programmes_CP_2025": "90 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "120 000 000,00"
+  },
+  {
+    "Description": "Transfer to Dummy Solidarity Foundation",
+    "DESTINATION": "DSF",
+    "Credits_programmes_CP_2025": "100 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Transfer to Dummy Hassan II Foundation",
+    "DESTINATION": "DH2F",
+    "Credits_programmes_CP_2025": "65 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "0,00"
+  },
+  {
+    "Description": "Transfer to Dummy Regional Partnership (Agadir)",
+    "DESTINATION": "DRPA",
+    "Credits_programmes_CP_2025": "10 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "12 000 000,00"
+  },
+  {
+    "Description": "Transfer to Dummy Investment Company",
+    "DESTINATION": "DISC",
+    "Credits_programmes_CP_2025": "55 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "50 000 000,00"
+  },
+  {
+    "Description": "TOTAL Dummy Transfers and Subsidies",
+    "DESTINATION": null,
+    "Credits_programmes_CP_2025": "2 000 000 000,00",
+    "Subventions_et_versements_effectues_CP_2025": "182 000 000,00"
+  }
+]

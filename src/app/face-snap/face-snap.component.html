@@ -1,0 +1,14 @@
+<h2>
+  {{faceSnap.title}}
+</h2>
+<img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
+<p>
+  {{faceSnap.description}}
+</p>
+
+<p>Created at : {{faceSnap.createAt}}</p>
+<h4>
+  <button (click)="onAddSnap()">{{message}}</button>
+  Snaps: 🥸{{snaps}}
+</h4>
+
