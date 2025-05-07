@@ -8,3 +8,8 @@ body, app-root {
 router-outlet {
   flex: 1;
 }
+
+::selection {
+  background-color: lightgray;
+  color: black; 
+}

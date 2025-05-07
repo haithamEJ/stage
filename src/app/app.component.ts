@@ -4,12 +4,14 @@ import { FaceSnap } from './models/face-snap';
 import { JsonTableComponent } from './json-table/json-table.component';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
     // FaceSnapComponent
     // JsonTableComponent
   ],

@@ -10,6 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class JsonTableComponent implements OnInit {
 
+  tables: {
+    title: string;
+    headers: string[];
+    data: any[];
+  }[] = [];
+
   rawData = [
     {
       "PROJETS EXISTANTS": "Projet de construction CHU Laayoune",
@@ -124,7 +130,7 @@ export class JsonTableComponent implements OnInit {
   ];
 
   rawData3 = [
-    
+
       {
         "Description": "Transfer to Dummy Social Support Fund",
         "DESTINATION": "DSSF",
@@ -270,45 +276,32 @@ export class JsonTableComponent implements OnInit {
   transformedData3: any[] = [];
 
   ngOnInit(): void {
+    this.tables = [
+      { title: 'Table 1: Projects', raw: this.rawData },
+      { title: 'Table 2: Programs', raw: this.rawData2 },
+      { title: 'Table 3: Transfers & Subsidies', raw: this.rawData3 }
+    ].map(table => ({
+      title: table.title,
+      headers: this.extractHeaders(table.raw),
+      data: this.transformData(table.raw)
+    }));
+  }
 
+  extractHeaders(data: any[]): string[] {
     const headerSet = new Set<string>();
-    this.rawData.forEach(item => {
-      Object.keys(item).forEach(key => headerSet.add(key));
-    });
-    this.headers = Array.from(headerSet);
-    this.transformedData = this.rawData.map((item: { [key: string]: any }) => {
-      const row: { [key: string]: any } = {};
-      this.headers.forEach((header: string) => {
-        row[header] = item[header] ?? '';
-      });
-      return row;
-    });
+    data.forEach(item => Object.keys(item).forEach(key => headerSet.add(key)));
+    return Array.from(headerSet);
+  }
 
-
-    const headerSet2 = new Set<string>();
-    this.rawData2.forEach(item => {
-      Object.keys(item).forEach(key => headerSet2.add(key));
-    });
-    this.headers2 = Array.from(headerSet2);
-    this.transformedData2 = this.rawData2.map((item: { [key: string]: any }) => {
+  transformData(data: any[]): any[] {
+    const headers = this.extractHeaders(data);
+    return data.map(item => {
       const row: { [key: string]: any } = {};
-      this.headers2.forEach((header: string) => {
-        row[header] = item[header] ?? '';
-      });
-      return row;
-    });
-
-    const headerSet3 = new Set<string>();
-    this.rawData3.forEach(item => {
-      Object.keys(item).forEach(key => headerSet3.add(key));
-    });
-    this.headers3 = Array.from(headerSet3);
-    this.transformedData3 = this.rawData3.map((item: { [key: string]: any }) => {
-      const row: { [key: string]: any } = {};
-      this.headers3.forEach((header: string) => {
+      headers.forEach(header => {
         row[header] = item[header] ?? '';
       });
       return row;
     });
   }
+
 }
