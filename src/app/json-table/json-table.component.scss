@@ -37,3 +37,9 @@
     background-color: #f5f5f5;
   }
 }
+.invisible-header {
+  background: transparent !important;
+  border: none !important;
+  color: transparent !important;
+  pointer-events: none;
+}

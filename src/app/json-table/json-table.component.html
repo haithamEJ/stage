@@ -4,14 +4,46 @@
     <table class="data-table">
       <thead>
         <tr>
-          <th *ngFor="let header of table.headers">{{ header }}</th>
+          <ng-container *ngFor="let header of table.headers">
+<th *ngIf="!table.nestedHeaders[header]" rowspan="2" [ngClass]="{'invisible-header': !header}">
+  {{ header }}
+</th>
+
+<th *ngIf="table.nestedHeaders[header]" [attr.colspan]="table.nestedHeaders[header].length" [ngClass]="{'invisible-header': !header}">
+  {{ header }}
+</th>
+
+
+
+          </ng-container>
+        </tr>
+        <tr>
+          <ng-container *ngFor="let header of table.headers">
+            <ng-container *ngIf="table.nestedHeaders[header]">
+              <th *ngFor="let subHeader of table.nestedHeaders[header]">
+                {{ subHeader }}
+              </th>
+            </ng-container>
+          </ng-container>
         </tr>
       </thead>
+
       <tbody>
-        <tr *ngFor="let row of table.data">
-          <td *ngFor="let header of table.headers">{{ row[header] }}</td>
-        </tr>
-      </tbody>
-    </table>
+          <tr *ngFor="let row of table.data">
+            <ng-container *ngFor="let header of table.headers">
+              <td *ngIf="!table.nestedHeaders[header]">
+                {{ row[header] }}
+              </td>
+              <ng-container *ngIf="table.nestedHeaders[header]">
+                <td *ngFor="let subHeader of table.nestedHeaders[header]">
+                  {{ row[header]?.[subHeader] || '-' }}
+                </td>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </tbody>
+      </table>
+
+
   </div>
 </div>
