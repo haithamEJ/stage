@@ -320,9 +320,9 @@ export class JsonTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.tables = [
-      { title: 'Table 1: Projects', raw: this.rawData },
-      { title: 'Table 2: Programs', raw: this.rawData2 },
-      { title: 'Table 3: Transfers & Subsidies', raw: this.rawData3 }
+      { title: 'Projet existant dans le cadre de la lettre de cadrage 2025', raw: this.rawData },
+      { title: 'BI par programme budgetaire', raw: this.rawData2 },
+      { title: 'Subventions et transferts', raw: this.rawData3 }
     ].map(table => {
       const { headers, nestedHeaders } = this.extractHeaders(table.raw);
       return {

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component , inject} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-header',
   imports: [RouterModule],
@@ -8,5 +8,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+   
 }
