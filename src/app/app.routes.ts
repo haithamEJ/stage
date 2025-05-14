@@ -13,16 +13,17 @@ export const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       { path: '', component: WelcomeComponent },
-      { path: 'tables', component: JsonTableComponent },
       { path: 'snap', component: FaceSnapComponent },
-            { path: 'display', component: DisplayTestComponent },
+      { path: 'display', component: DisplayTestComponent },
     ]
   },
   {
     path: '',
     component: BlankLayoutComponent,
     children: [
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'tables', component: JsonTableComponent },
+
     ]
   }
 

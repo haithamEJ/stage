@@ -1,45 +1,247 @@
 .container {
   padding: 20px;
+  margin: 10px 10px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 20px 15px 18px rgba(0,0,0,0.1);
+  height: auto;
+  min-height: 0;
+}
 
-  h2 {
-    margin-top: 80px;
-    margin-bottom: 15px;
-    color: #333;
-  }
+
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .table-container {
   width: 100%;
   overflow-x: auto;
   margin-bottom: 30px;
+  border-radius: 5px;
+  padding-bottom: 5px;
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
-
-  th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  tr:hover {
-    background-color: #f5f5f5;
-  }
 }
+
+.details-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  color: #f3860e;
+  border: 2px solid #f3860e;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.data-table th, .data-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid #000000;
+}
+
+.data-table th {
+  background-color: #1a4e7c;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tables-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.side-by-side {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+
+}
+
+.table-0 th:first-child {
+  background-color: #1a4e7c !important;
+  color: white;
+}
+
+
+.table-0 thead tr:last-child th {
+  background-color: #abdbe3 !important;
+  color: #333;
+}
+
+.table-0 thead tr:first-child th:nth-child(2) {
+  background-color: #1a4e7c !important;
+  color: white;
+}
+
+.table-0 thead tr:first-child th:nth-child(3) {
+  background-color: #f9a825 !important;
+  color: #333;
+}
+
+.table-0 thead tr:first-child th:nth-child(4) {
+  background-color: #4caf50 !important;
+  color: #333;
+}
+
+.table-0 .total-row td:nth-child(1) {
+  background-color: #1a4e7c !important;
+  color: white;
+  font-weight: bold;
+}
+
+.table-0 .total-row td:nth-child(2),
+.table-0 .total-row td:nth-child(3) {
+  background-color: #1a4e7c !important;
+  color: white;
+  font-weight: bold;
+}
+
+.table-0 .total-row td:nth-child(4),
+.table-0 .total-row td:nth-child(5) {
+  background-color: #f9a825 !important;
+  color: #333;
+  font-weight: bold;
+}
+
+.table-0 .total-row td:nth-child(6),
+.table-0 .total-row td:nth-child(7) {
+  background-color: #4caf50 !important;
+  color: #333;
+  font-weight: bold;
+}
+
+.table-1 thead tr:first-child th:first-child {
+  background-color: transparent !important;
+  color: #333;
+  border: none !important;
+}
+
+.table-1 th:not(:first-child) {
+  background-color: #1a4e7c !important;
+  color: white;
+}
+
+.table-1 thead tr:last-child th {
+  background-color: #1a4e7c !important;
+  color: white;
+}
+
+.table-1 .total-row td {
+  background-color: #f9a825 !important;
+  color: #333;
+  font-weight: bold;
+}
+
+.table-2 th:first-child {
+  background-color: #1a4e7c !important;
+  color: white;
+}
+
+.table-2 th:last-child {
+  background-color: #abdbe3 !important;
+  color: #333;
+}
+
+.table-2 .total-row td {
+
+  color: #333;
+  font-weight: bold;
+}
+
+.total-row {
+  font-weight: bold;
+}
+
+.total-row td {
+  border-color: #0e3a61;
+}
+
 .invisible-header {
   background: transparent !important;
   border: none !important;
   color: transparent !important;
   pointer-events: none;
+}
+
+.table-2 {
+  margin-bottom: 0;
+}
+
+.container:nth-child(3) {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.container:nth-child(3) .table-container {
+  margin-bottom: 0;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .details-button {
+    top: 10px;
+    right: 10px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+  }
+  .container {
+    padding: 10px;
+    margin: 10px 5px;
+  }
+
+  .data-table th, .data-table td {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .tables-container {
+    flex-direction: column;
+  }
+
+  .side-by-side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+    margin: 5px 2px;
+  }
+
+  .data-table th, .data-table td {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+  }
 }

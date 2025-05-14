@@ -1,41 +1,81 @@
-<div class="container" *ngFor="let table of tables">
-  <h2>{{ table.title }}</h2>
+<div class="container" *ngIf="tables.length > 0">
+  <h2>{{ tables[0].title }}</h2>
   <div class="table-container">
-    <table class="data-table">
+    <table class="data-table" [ngClass]="'table-0'">
       <thead>
         <tr>
-          <ng-container *ngFor="let header of table.headers">
-<th *ngIf="!table.nestedHeaders[header]" rowspan="2" [ngClass]="{'invisible-header': !header}">
-  {{ header }}
-</th>
-
-<th *ngIf="table.nestedHeaders[header]" [attr.colspan]="table.nestedHeaders[header].length" [ngClass]="{'invisible-header': !header}">
-  {{ header }}
-</th>
-
-
-
+          <ng-container *ngFor="let header of tables[0].headers">
+            <th *ngIf="!tables[0].nestedHeaders[header]" rowspan="2" [ngClass]="{'invisible-header': !header}">
+              {{ header }}
+            </th>
+            <th *ngIf="tables[0].nestedHeaders[header]" [attr.colspan]="tables[0].nestedHeaders[header].length" [ngClass]="{'invisible-header': !header}">
+              {{ header }}
+            </th>
           </ng-container>
         </tr>
         <tr>
-          <ng-container *ngFor="let header of table.headers">
-            <ng-container *ngIf="table.nestedHeaders[header]">
-              <th *ngFor="let subHeader of table.nestedHeaders[header]">
+          <ng-container *ngFor="let header of tables[0].headers">
+            <ng-container *ngIf="tables[0].nestedHeaders[header]">
+              <th *ngFor="let subHeader of tables[0].nestedHeaders[header]">
                 {{ subHeader }}
               </th>
             </ng-container>
           </ng-container>
         </tr>
       </thead>
-
       <tbody>
-          <tr *ngFor="let row of table.data">
-            <ng-container *ngFor="let header of table.headers">
-              <td *ngIf="!table.nestedHeaders[header]">
+        <tr *ngFor="let row of tables[0].data; let last = last" [ngClass]="{'total-row': last}">
+          <ng-container *ngFor="let header of tables[0].headers">
+            <td *ngIf="!tables[0].nestedHeaders[header]">
+              {{ row[header] }}
+            </td>
+            <ng-container *ngIf="tables[0].nestedHeaders[header]">
+              <td *ngFor="let subHeader of tables[0].nestedHeaders[header]">
+                {{ row[header]?.[subHeader] || '-' }}
+              </td>
+            </ng-container>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="tables-container">
+  <div class="container side-by-side" *ngIf="tables.length > 1">
+    <a href="#" class="details-button">Détails</a>
+    <h2>{{ tables[1].title }}</h2>
+    <div class="table-container">
+      <table class="data-table table-1">
+        <thead>
+          <tr>
+            <ng-container *ngFor="let header of tables[1].headers">
+              <th *ngIf="!tables[1].nestedHeaders[header]" rowspan="2" [ngClass]="{'invisible-header': !header}">
+                {{ header }}
+              </th>
+              <th *ngIf="tables[1].nestedHeaders[header]" [attr.colspan]="tables[1].nestedHeaders[header].length" [ngClass]="{'invisible-header': !header}">
+                {{ header }}
+              </th>
+            </ng-container>
+          </tr>
+          <tr>
+            <ng-container *ngFor="let header of tables[1].headers">
+              <ng-container *ngIf="tables[1].nestedHeaders[header]">
+                <th *ngFor="let subHeader of tables[1].nestedHeaders[header]">
+                  {{ subHeader }}
+                </th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of tables[1].data; let last = last" [ngClass]="{'total-row': last}">
+            <ng-container *ngFor="let header of tables[1].headers">
+              <td *ngIf="!tables[1].nestedHeaders[header]">
                 {{ row[header] }}
               </td>
-              <ng-container *ngIf="table.nestedHeaders[header]">
-                <td *ngFor="let subHeader of table.nestedHeaders[header]">
+              <ng-container *ngIf="tables[1].nestedHeaders[header]">
+                <td *ngFor="let subHeader of tables[1].nestedHeaders[header]">
                   {{ row[header]?.[subHeader] || '-' }}
                 </td>
               </ng-container>
@@ -43,7 +83,50 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
 
-
+  <div class="container side-by-side" *ngIf="tables.length > 2">
+    <a href="#" class="details-button">Détails</a>
+    <h2>{{ tables[2].title }}</h2>
+    <div class="table-container">
+      <table class="data-table table-2">
+        <thead>
+          <tr>
+            <ng-container *ngFor="let header of tables[2].headers">
+              <th *ngIf="!tables[2].nestedHeaders[header]" rowspan="2" [ngClass]="{'invisible-header': !header}">
+                {{ header }}
+              </th>
+              <th *ngIf="tables[2].nestedHeaders[header]" [attr.colspan]="tables[2].nestedHeaders[header].length" [ngClass]="{'invisible-header': !header}">
+                {{ header }}
+              </th>
+            </ng-container>
+          </tr>
+          <tr>
+            <ng-container *ngFor="let header of tables[2].headers">
+              <ng-container *ngIf="tables[2].nestedHeaders[header]">
+                <th *ngFor="let subHeader of tables[2].nestedHeaders[header]">
+                  {{ subHeader }}
+                </th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of tables[2].data; let last = last" [ngClass]="{'total-row': last}">
+            <ng-container *ngFor="let header of tables[2].headers">
+              <td *ngIf="!tables[2].nestedHeaders[header]">
+                {{ row[header] }}
+              </td>
+              <ng-container *ngIf="tables[2].nestedHeaders[header]">
+                <td *ngFor="let subHeader of tables[2].nestedHeaders[header]">
+                  {{ row[header]?.[subHeader] || '-' }}
+                </td>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
