@@ -8,6 +8,11 @@
   min-height: 0;
 }
 
+.container.side-by-side.table-2-container {
+  background-color: #ffffff;
+  height: 640px;
+  overflow-y: auto;
+}
 
 
 h2 {
@@ -199,10 +204,7 @@ h2 {
   box-sizing: border-box;
 }
 
-.container:nth-child(3) .table-container {
-  margin-bottom: 0;
-  height: auto;
-}
+
 
 @media (max-width: 768px) {
   .details-button {
